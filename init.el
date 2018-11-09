@@ -1,11 +1,31 @@
-;; This buffer is for text that is not saved, and for Lisp evaluation.
-;; To create a file, visit it with C-x C-f and enter text in its buffer.
+;;; init.el --- Prelude Emacs modified -*- lexical-binding: t -*-
+
+;; Author: zhenchao
+;; Keywords: prelude
 
 
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
+;; This file is not part of GNU Emacs
+
+;; This file is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation; either version 3, or (at your option)
+;; any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; For a full copy of the GNU General Public License
+;; see <http://www.gnu.org/licenses/>.
+
+
+;;; Commentary:
+
+;; commentary
+
+;;; Code:
+
 (defvar current-user
   (getenv
    (if (equal system-type 'windows-nt) "USERNAME" "USER")))
@@ -80,6 +100,8 @@ by Prelude.")
 (require 'prelude-eshell)
 (require 'prelude-emacs-lisp)
 (require 'prelude-elixir)
+(require 'prelude-markdown)
 
+(provide 'init)
 
 ;;; init.el ends here

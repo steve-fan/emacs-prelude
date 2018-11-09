@@ -101,6 +101,7 @@ by Prelude.")
 (require 'prelude-emacs-lisp)
 (require 'prelude-elixir)
 (require 'prelude-markdown)
+(require 'prelude-org)
 
 (provide 'init)
 

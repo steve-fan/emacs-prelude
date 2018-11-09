@@ -93,15 +93,14 @@
 (global-unset-key (kbd "C-x c"))
 
 ;; helm projectile config
-(require 'helm-projectile)
 (projectile-global-mode)
 (setq projectile-compilation-command 'helm)
 (setq projectile-switch-project-action 'helm-projectile-find-file)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (helm-projectile-on)
 
 (global-set-key (kbd "C-c p /") 'helm-projectile-ag)
 (global-set-key (kbd "C-x p") 'helm-projectile-find-file)
-(global-set-key (kbd "S-p") 'helm-projectile-find-file)
 
 (setq projectile-globally-ignored-directories
       (append '("node_modules" "build" "assets/node_modules" "deps") projectile-globally-ignored-directories))

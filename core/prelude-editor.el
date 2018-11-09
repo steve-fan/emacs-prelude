@@ -9,6 +9,18 @@
 ;; Newline at end of file
 (setq require-final-newline t)
 
+;; enable narrowing commands
+(put 'narrow-to-region 'disabled nil)
+(put 'narrow-to-page 'disabled nil)
+(put 'narrow-to-defun 'disabled nil)
+
+;; enabled change region case commands
+(put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
+
+;; enable erase-buffer command
+(put 'erase-buffer 'disabled nil)
+
 ;; Store backups and auto-saved files in
 ;; TEMPORARY-FILE-DIRECTORY (which defaults to /tmp on Unix),
 ;; instead of in the same directory as the file. This means we're

@@ -1,3 +1,8 @@
+
+;;; Commentary:
+
+;;; Code:
+
 (require 'cl)
 (require 'package)
 
@@ -63,24 +68,19 @@
     zenburn-theme)
   "A list of packages to ensure are installed at launch.")
 
-(package-refresh-contents)
-(dolist (package prelude-packages)
-  (unless (package-installed-p package)
-    (package-install package)))
-
 (defun prelude-packages-installed-p ()
-  "check if all packages in `prelude-packages` are installed."
+  "Check if all packages in `prelude-packages` are installed."
   (every #'package-installed-p prelude-packages))
 
 (defun prelude-require-package (package)
-  "Install package unless already installed."
+  "Install PACKAGE unless already installed."
   (unless (memq package prelude-packages)
     (add-to-list 'prelude-packages))
   (unless (package-installed-p package)
     (package-install package)))
 
 (defun prelude-require-packages (packages)
-  "Ensure packages are installed.
+  "Ensure PACKAGES are installed.
 Missing packages are installed automatically."
   (mapc #'prelude-require-package packages))
 
@@ -95,3 +95,4 @@ Missing packages are installed automatically."
 (prelude-install-packages)
 
 (provide 'prelude-package)
+;;; prelude-package.el ends here

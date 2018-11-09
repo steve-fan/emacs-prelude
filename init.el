@@ -79,6 +79,7 @@ by Prelude.")
 (require 'prelude-programming)
 (require 'prelude-eshell)
 (require 'prelude-emacs-lisp)
+(require 'prelude-elixir)
 
 
 ;;; init.el ends here

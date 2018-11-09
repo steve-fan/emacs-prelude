@@ -75,7 +75,7 @@
 (defun prelude-require-package (package)
   "Install PACKAGE unless already installed."
   (unless (memq package prelude-packages)
-    (add-to-list 'prelude-packages))
+    (add-to-list 'prelude-packages package))
   (unless (package-installed-p package)
     (package-install package)))
 

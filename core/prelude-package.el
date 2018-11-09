@@ -8,7 +8,7 @@
 
 (setq package-archives '())		;; reset package-archives
 (add-to-list 'package-archives
-	     '("melpa" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa-stable/") t)
+	     '("melpa" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/") t)
 (add-to-list 'package-archives
 	     '("gnu" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/") t)
 (add-to-list 'package-archives

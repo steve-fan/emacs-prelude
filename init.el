@@ -102,6 +102,7 @@ by Prelude.")
 (require 'prelude-elixir)
 (require 'prelude-markdown)
 (require 'prelude-org)
+(require 'prelude-typescript)
 
 (provide 'init)
 

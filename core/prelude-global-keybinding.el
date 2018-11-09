@@ -1,10 +1,7 @@
 ;;; Codes:
 
-;; map C-j to ESC, handy
-(define-key key-translation-map (kbd "C-j") (kbd "ESC"))
-
 ;; toggle maximize current buffer
-(global-set-key (kbd "C-c o") 'toggle-maximize-buffer)
+(global-set-key (kbd "C-c .") 'toggle-maximize-buffer)
 
 ;; remap goto-line to "C-c l" for convenience's sake
 (global-unset-key (kbd "M-g g"))
@@ -13,17 +10,11 @@
 ;; Align your code in a pretty way.
 (global-set-key (kbd "C-x \\") 'align-regexp)
 
-;; Indentation help
-(global-set-key (kbd "C-^") 'crux-top-join-line)
-
 ;; Start eshell or switch to it if it's active.
 (global-set-key (kbd "C-x m") 'eshell)
 
 ;; Start a new eshell even if one is active.
 (global-set-key (kbd "C-x M") (lambda () (interactive) (eshell t)))
-
-;; Activate occur easily inside isearch
-(define-key isearch-mode-map (kbd "C-o") 'helm-occur)
 
 ;; use hippie-expand instead of dabbrev
 (global-set-key (kbd "M-/") 'hippie-expand)
@@ -51,6 +42,7 @@
 (global-set-key (kbd "C-c m n") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-c m p") 'mc/mark-previous-like-this)
 
+
 ;; helm key bindings
 (require 'helm)
 (require 'helm-config)
@@ -62,6 +54,10 @@
 (global-set-key (kbd "C-c i") 'helm-imenu)
 ;; cycle the kill ring with helm
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
+;; show all marks
+(global-set-key (kbd "C-h SPC") 'helm-all-mark-rings)
+;; Activate occur easily inside isearch
+(define-key isearch-mode-map (kbd "C-o") 'helm-occur)
 
 (setq helm-move-to-line-cycle-in-source     t ; move to end or beginning of source when reaching top or bottom of source.
       helm-ff-search-library-in-sexp        t ; search for library in `require' and `declare-function' sexp.
@@ -100,7 +96,8 @@
 (helm-projectile-on)
 
 (global-set-key (kbd "C-c p /") 'helm-projectile-ag)
-(global-set-key (kbd "M-p") 'helm-projectile-find-file)
+(global-set-key (kbd "C-x p") 'helm-projectile-find-file)
+(global-set-key (kbd "S-p") 'helm-projectile-find-file)
 
 (setq projectile-globally-ignored-directories
       (append '("node_modules" "build" "assets/node_modules" "deps") projectile-globally-ignored-directories))
@@ -111,6 +108,13 @@
 (define-key yas-minor-mode-map (kbd "TAB") nil)
 ;; set yasnippet's key binding to shift+tab
 (define-key yas-minor-mode-map (kbd "<backtab>") 'yas-expand)
+
+
+;; crux key bindings
+(require 'crux)
+(global-key-binding (kbd "C-c o") 'crux-open-with)
+(global-set-key (kbd "C-^") 'crux-top-join-line)
+(global-key-binding (kbd "C-a") 'crux-move-beginning-of-line)
 
 (provide 'prelude-global-keybinding)
 

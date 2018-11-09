@@ -14,8 +14,12 @@
       `((".*" ,temporary-file-directory t)))
 
 ;; no backup files, super-save-mode save the ass
-(super-save-mode t)
 (setq make-backup-files nil)
+(super-save-mode t)
+
+;; save customization to 'customization.el' instread of appending to init file
+(setq custom-file (expand-file-name "customization.el" prelude-dir))
+(load custom-file (expand-file-name "customization.el" prelude-dir))
 
 ;; enable mouse click and wheel action in terminal
 (unless (display-graphic-p)
@@ -48,5 +52,7 @@
 
 (smartparens-global-mode t)
 (yas-global-mode t)
+
+(require 'crux)
 
 (provide 'prelude-core)

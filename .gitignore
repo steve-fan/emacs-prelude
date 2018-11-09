@@ -3,3 +3,6 @@ auto-save-list
 recentf
 eshell
 projectile-bookmarks.eld
+projectile.cache
+SessionDesktop.el
+customization.el

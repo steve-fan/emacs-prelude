@@ -73,26 +73,4 @@ by Prelude.")
 (require 'prelude-ui)
 (require 'prelude-global-keybinding)
 
-
 ;;; init.el ends here
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   (quote
-    ("06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" default)))
- '(helm-ag-command-option "-i")
- '(helm-follow-mode-p t)
- '(helm-follow-mode-persistent t)
- '(helm-imenu-persistent-action t)
- '(package-selected-packages
-   (quote
-    (zenburn-theme yasnippet-snippets writeroom-mode which-key visual-regexp switch-window super-save solarized-theme smartrep smartparens rainbow-delimiters neotree multiple-cursors move-text monokai-theme magit hl-todo helm-projectile helm-ag gitignore-mode gitconfig-mode git-timemachine flycheck expand-region exec-path-from-shell evil emmet-mode easy-kill diminish diff-hl crux company color-theme-sanityinc-tomorrow beacon avy anzu))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )

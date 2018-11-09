@@ -76,6 +76,7 @@ by Prelude.")
 
 (message "Lording Prelude's modules...")
 
+(require 'prelude-programming)
 (require 'prelude-eshell)
 
 

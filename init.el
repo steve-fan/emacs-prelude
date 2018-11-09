@@ -71,6 +71,7 @@ by Prelude.")
 (require 'prelude-package)
 (require 'prelude-core)
 (require 'prelude-ui)
+(require 'prelude-editor)
 (require 'prelude-global-keybinding)
 
 (message "Lording Prelude's modules...")

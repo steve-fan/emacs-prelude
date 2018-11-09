@@ -4,19 +4,6 @@
   (mapc 'kill-buffer (buffer-list))
   (delete-other-windows))
 
-;; Store backups and auto-saved files in
-;; TEMPORARY-FILE-DIRECTORY (which defaults to /tmp on Unix),
-;; instead of in the same directory as the file. This means we're
-;; still making backups, but not where they'll get in the way.
-(setq backup-directory-alist
-      `((".*" . ,temporary-file-directory)))
-(setq auto-save-file-name-transforms
-      `((".*" ,temporary-file-directory t)))
-
-;; no backup files, super-save-mode save the ass
-(setq make-backup-files nil)
-(super-save-mode t)
-
 ;; save customization to 'customization.el' instread of appending to init file
 (setq custom-file (expand-file-name "customization.el" prelude-dir))
 (load custom-file (expand-file-name "customization.el" prelude-dir))

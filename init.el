@@ -73,4 +73,9 @@ by Prelude.")
 (require 'prelude-ui)
 (require 'prelude-global-keybinding)
 
+(message "Lording Prelude's modules...")
+
+(require 'prelude-eshell)
+
+
 ;;; init.el ends here

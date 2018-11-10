@@ -107,6 +107,7 @@ by Prelude.")
 (require 'prelude-markdown)
 (require 'prelude-org)
 (require 'prelude-typescript)
+(require 'prelude-javascript)
 
 (provide 'init)
 ;;; init.el ends here

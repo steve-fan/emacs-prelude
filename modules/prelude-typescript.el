@@ -27,18 +27,8 @@
 ;;; Code:
 
 (require 'prelude-programming)
-(prelude-require-packages '(tide web-mode))
-
-(require 'typescript-mode)
-
-(defun setup-tide-mode ()
-  (interactive)
-  (tide-setup)
-  (flycheck-mode +1)
-  (setq flycheck-check-syntax-automatically '(save mode-enabled))
-  (eldoc-mode +1)
-  (tide-hl-identifier-mode +1)
-  (company-mode +1))
+(require 'prelude-tide)
+(prelude-require-packages '(web-mode))
 
 (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
 
@@ -60,6 +50,7 @@
 (add-to-list 'auto-mode-alist '("\\.tsx\\'" . tsx-mode))
 (add-hook 'tsx-mode-hook 'emmet-mode)
 (add-hook 'tsx-mode-hook #'setup-tide-mode)
+(add-hook 'tsx-mode-hook 'company-mode)
 (add-hook 'tsx-mode-hook #'highlight-element-and-column)
 
 (provide 'prelude-typescript)

@@ -10,10 +10,6 @@
 ;; Align your code in a pretty way.
 (global-set-key (kbd "C-x \\") 'align-regexp)
 
-;; Comment region
-;; default keybinding not work in iTerm
-(global-set-key (kbd "C-x ;") 'comment-region)
-
 ;; Start eshell or switch to it if it's active.
 (global-set-key (kbd "C-x m") 'eshell)
 

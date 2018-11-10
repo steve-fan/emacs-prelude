@@ -43,5 +43,11 @@
     (global-flycheck-mode +1)
   (add-hook 'prog-mode-hook 'flycheck-mode))
 
+;; show flycheck errors with helm
+(prelude-require-packages '(helm-flycheck))
+(require 'helm-flycheck)
+(eval-after-load 'flycheck
+  '(define-key flycheck-mode-map (kbd "C-c ! h") 'helm-flycheck))
+
 (provide 'prelude-programming)
 ;;; prelude-programming.el ends here

@@ -108,6 +108,7 @@ by Prelude.")
 (require 'prelude-org)
 (require 'prelude-typescript)
 (require 'prelude-javascript)
+(require 'prelude-rust)
 
 (provide 'init)
 ;;; init.el ends here

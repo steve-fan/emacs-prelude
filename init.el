@@ -94,6 +94,10 @@ by Prelude.")
 (require 'prelude-editor)
 (require 'prelude-global-keybinding)
 
+;; macOS specific settings
+(when (eq system-type 'darwin)
+  (require 'prelude-macos))
+
 (message "Lording Prelude's modules...")
 
 (require 'prelude-programming)
@@ -105,5 +109,4 @@ by Prelude.")
 (require 'prelude-typescript)
 
 (provide 'init)
-
 ;;; init.el ends here

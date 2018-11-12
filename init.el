@@ -117,6 +117,7 @@ by Prelude.")
 (require 'prelude-javascript)
 (require 'prelude-rust)
 (require 'prelude-python)
+(require 'prelude-ruby)
 
 (provide 'init)
 ;;; init.el ends here

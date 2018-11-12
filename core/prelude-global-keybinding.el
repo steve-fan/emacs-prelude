@@ -22,7 +22,7 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 
 (setq avy-all-windows nil)
-(global-set-key (kbd "M-j") 'avy-goto-char)
+(global-set-key (kbd "C-c SPC SPC") 'avy-goto-char)
 (global-set-key (kbd "M-SPC") 'avy-goto-word-0)
 
 ;; improved window navigation with swith-window

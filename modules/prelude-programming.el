@@ -22,7 +22,8 @@
 
 (defun prelude-prog-mode-defaults ()
   "Default coding hook, useful with any programming language."
-  (smartparens-mode +1))
+  (smartparens-mode +1)
+  (idle-highlight-mode +1))
 
 ;; in Emacs 24 programming major modes generally derive from a common
 ;; mode named prog-mode; for others, we'll arrange for our mode

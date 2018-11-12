@@ -53,6 +53,7 @@
 	(helm . "melpa-stable")
 	(helm-ag . "melpa-stable")
 	(helm-projectile . "melpa-stable")
+        (idle-highlight-mode . "melpa-stable")
 	(neotree . "melpa-stable")
 	(magit . "melpa-stable")
 	(monokai-theme . "melpa-stable")

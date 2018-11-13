@@ -26,7 +26,7 @@
 
 ;;; Code:
 
-(prelude-require-packages '(org-journal))
+(prelude-require-packages '(org-journal htmlize))
 
 (add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\)$" . org-mode))
 
@@ -84,10 +84,45 @@
 (add-hook 'org-mode-hook 'org-indent-mode)
 (add-hook 'org-mode-hook 'visual-line-mode)
 
+;; Journal
 (require 'org-journal)
 (setq org-journal-dir "~/Documents/org/journal")
 ;; journal file name format
 (setq org-journal-file-format "%Y-%m-%d.org")
+(setq org-export-html-postamble-format '(("en" "")))
+
+;; Blog
+(require 'ox-publish)
+(setf org-export-html-coding-system 'utf-8-unix)
+
+(setq org-publish-project-alist
+      '(("blog-posts"
+         :base-directory "~/Documents/org/blog/"
+         :base-extension "org"
+         :publishing-directory "~/Documents/blog/"
+         :recursive t
+         :publishing-function org-html-publish-to-html
+         :headline-levels 4             ; Just the default for this project.
+         :auto-preamble t
+         :section-numbers nil
+         :auto-sitemap t                ; Generate sitemap.org automagically...
+         :sitemap-filename "sitemap.org"  ; ... call it sitemap.org (it's the default)...
+         :sitemap-title "Sitemap"         ; ... with title 'Sitemap'.
+         :sitemap-sort-files anti-chronologically
+         :sitemap-file-entry-format "%d %t"
+         :with-title t
+         :with-toc nil
+         :with-author nil
+         :with-timestamps nil
+         :html-head-extra "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<link rel='stylesheet' href='./css/site.css' />"
+         )
+        ("blog-static"
+         :base-directory "~/Documents/org/blog"
+         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+         :publishing-directory "~/Documents/blog"
+         :recursive t
+         :publishing-function org-publish-attachment)
+        ("blog" :components ("blog-posts" "blog-static"))))
 
 (provide 'prelude-org)
 

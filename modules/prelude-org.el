@@ -93,35 +93,67 @@
 
 ;; Blog
 (require 'ox-publish)
+(require 'ox-html)
 (setf org-export-html-coding-system 'utf-8-unix)
+
+(defvar prelude-website-html-head
+  "<link rel='stylesheet' href='/css/site.css' type='text/css'/>")
+
+(defvar prelude-website-html-blog-head
+  "<link rel='stylesheet' href='/css/site.css' type='text/css'/>")
+
+(defvar prelude-website-html-postamble
+  "<div class='footer'>最后更新于 %C. <br></div>")
+
+(defvar prelude-website-html-preamble
+  "<nav>Navigation</nav>")
+
+(setq org-html-preamble
+      "<div class='nav'>
+<ul>
+<li><a href='/'>Home</a></li>
+<li><a href='/'>Home</a></li>
+</ul>
+</div>
+")
 
 (setq org-publish-project-alist
       '(("blog-posts"
-         :base-directory "~/Documents/org/blog/"
+         :base-directory "~/Documents/blog/"
          :base-extension "org"
-         :publishing-directory "~/Documents/blog/"
+         :publishing-directory "~/Documents/github_pages/"
          :recursive t
          :publishing-function org-html-publish-to-html
          :headline-levels 4             ; Just the default for this project.
          :auto-preamble t
          :section-numbers nil
-         :auto-sitemap t                ; Generate sitemap.org automagically...
-         :sitemap-filename "sitemap.org"  ; ... call it sitemap.org (it's the default)...
-         :sitemap-title "Sitemap"         ; ... with title 'Sitemap'.
-         :sitemap-sort-files anti-chronologically
-         :sitemap-file-entry-format "%d %t"
-         :with-title t
+
+         :auto-sitemap t
+
          :with-toc nil
          :with-author nil
-         :with-timestamps nil
-         :html-head-extra "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<link rel='stylesheet' href='./css/site.css' />"
-         )
+         :with-date nil
+         :with-title nil
+         :html-head-include-default-style nil
+         :html-preamble "<div class='nav'>
+<ul>
+<li><a href='/'>首页</a></li>
+<li><a href='/sitemap.html'>博客</a></li>
+<li><a target='_blank' href='https://github.com/steve-fan'>GitHub</a></li>
+<li><a target='_blank' href='https://twitter.com/stevefan'>Twitter</a></li>
+<li><a href='/contact.html'>Contact</a></li>
+</ul>
+</div>"
+         :html-head-extra "<link rel='stylesheet' href='/css/site.css' type='text/css'/>"
+         :html-postamble "<div class='footer'>最后更新于 %C</div>")
+
         ("blog-static"
-         :base-directory "~/Documents/org/blog"
+         :base-directory "~/Documents/blog"
          :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
-         :publishing-directory "~/Documents/blog"
+         :publishing-directory "~/Documents/github_pages"
          :recursive t
          :publishing-function org-publish-attachment)
+
         ("blog" :components ("blog-posts" "blog-static"))))
 
 (provide 'prelude-org)

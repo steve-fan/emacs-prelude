@@ -95,7 +95,7 @@
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (helm-projectile-on)
 
-(global-set-key (kbd "C-c p /") 'helm-projectile-ag)
+(global-set-key (kbd "C-c /") 'helm-projectile-ag)
 (global-set-key (kbd "C-x p") 'helm-projectile-find-file)
 
 (setq projectile-globally-ignored-directories

@@ -47,6 +47,7 @@
     helm
     helm-ag
     helm-projectile
+    idle-highlight-mode
     neotree
     magit
     monokai-theme

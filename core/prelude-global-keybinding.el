@@ -1,4 +1,5 @@
-;;; Codes:
+
+;;; Code:
 
 ;; toggle maximize current buffer
 (global-set-key (kbd "C-c .") 'toggle-maximize-buffer)
@@ -21,15 +22,19 @@
 
 (global-set-key (kbd "C-x g") 'magit-status)
 
+(require 'avy)
 (setq avy-all-windows nil)
 (global-set-key (kbd "C-c SPC SPC") 'avy-goto-char)
 (global-set-key (kbd "M-SPC") 'avy-goto-word-0)
 
+(require 'switch-window)
 ;; improved window navigation with swith-window
 (global-set-key (kbd "C-x o") 'switch-window)
 (global-set-key [remap other-window] 'switch-window)
 ;; select a window with "a-z" instead of "1-9"
 (setq switch-window-shortcut-style 'qwerty)
+
+(require 'company)
 
 (with-eval-after-load 'company
   (define-key company-active-map (kbd "M-n") nil)

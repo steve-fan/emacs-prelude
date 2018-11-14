@@ -20,7 +20,7 @@
       (load prelude-pinned-packages-file)))
 
 ;; set package-user-dir to be relative to Prelude install path
-(setq package-user-dir (expand-file-name "elpa" prelude-dir))
+;; (setq package-user-dir (expand-file-name "elpa" prelude-dir))
 (package-initialize)
 
 (defvar prelude-packages

@@ -135,6 +135,9 @@
 (global-set-key (kbd "C-c j") 'crux-top-join-line)
 (global-set-key (kbd "C-a") 'crux-move-beginning-of-line)
 
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
+
 (provide 'prelude-global-keybinding)
 
 ;;; prelude-global-keybindings.el ends here

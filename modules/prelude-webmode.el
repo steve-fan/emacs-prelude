@@ -32,6 +32,8 @@
 (setq web-mode-enable-current-element-highlight t)
 (setq web-mode-enable-current-column-highlight t)
 
+(setq emmet-preview-default nil)
+
 (provide 'prelude-webmode)
 
 ;;; prelude-webmode.el ends here

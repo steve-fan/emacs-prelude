@@ -28,6 +28,7 @@
 
 (smartparens-global-mode t)
 (yas-global-mode t)
+(nyan-mode t)
 
 (require 'crux)
 

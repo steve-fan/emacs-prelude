@@ -49,6 +49,7 @@
     helm-projectile
     idle-highlight-mode
     neotree
+    nyan-mode
     magit
     monokai-theme
     move-text

@@ -129,9 +129,9 @@
 
 ;; crux key bindings
 (require 'crux)
-(global-key-binding (kbd "C-c o") 'crux-open-with)
-(global-set-key (kbd "C-^") 'crux-top-join-line)
-(global-key-binding (kbd "C-a") 'crux-move-beginning-of-line)
+(global-set-key (kbd "C-c o") 'crux-open-with)
+(global-set-key (kbd "C-c j") 'crux-top-join-line)
+(global-set-key (kbd "C-a") 'crux-move-beginning-of-line)
 
 (provide 'prelude-global-keybinding)
 

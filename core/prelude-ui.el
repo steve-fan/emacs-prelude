@@ -6,8 +6,7 @@
   (menu-bar-mode -1))
 
 ;; disable tab
-(when (fboundp 'tabbar-mode)
-  (tabbar-mode -1))
+(tabbar-mode -1)
 
 ;; hide scrollbar
 (when (fboundp 'scroll-bar-mode)
@@ -52,5 +51,14 @@
 (dired-async-mode 1)
 
 (load-theme 'sanityinc-tomorrow-night t)
+
+;; Font
+(setq linum-format "%3d")
+(set-frame-font "M+ 2m 16")
+(add-to-list 'default-frame-alist
+             '(font . "M+ 2m 16"))
+
+;; open *help* in current frame for `one-buffer-one-frame-mode' (Aquamacs open *help* in a new frame)
+(setq special-display-regexps (remove "[ ]?\\*[hH]elp.*" special-display-regexps))
 
 (provide 'prelude-ui)

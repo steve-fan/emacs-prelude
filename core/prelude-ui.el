@@ -13,8 +13,9 @@
 (when (fboundp 'scroll-bar-mode)
   (scroll-bar-mode -1))
 
+;; Fringe on left and right: 8 pixels
 (when (fboundp 'fringe-mode)
-  (fringe-mode 0))
+  (fringe-mode '(8 . 8)))
 
 ;; the blinking cursor is nothing, but an annoyance
 (blink-cursor-mode -1)

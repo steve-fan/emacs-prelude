@@ -84,6 +84,7 @@
 ;; and on windows switch
 (require 'super-save)
 (super-save-mode +1)
+(diminish 'super-save-mode)
 
 ;; highlight the current line
 (global-hl-line-mode +1)
@@ -96,6 +97,7 @@
 ;; projectile is a project management mode
 (require 'projectile)
 (projectile-mode t)
+(diminish 'projectile-mode)
 
 ;; avy allows us to effectively navigate to visible things
 (require 'avy)

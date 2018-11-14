@@ -15,6 +15,10 @@
   (global-set-key (kbd "<mouse-5>") 'scroll-up-line)
   )
 
+(when (display-grayscale-p)
+  (global-set-key (kbd "<A-wheel-down>") 'text-scale-decrease)
+  (global-set-key (kbd "<A-wheel-up>") 'text-scale-increase))
+
 (defun toggle-maximize-buffer () "Maximize buffer"
        (interactive)
        (if (= 1 (length (window-list)))

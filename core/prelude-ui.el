@@ -1,12 +1,13 @@
 (when (fboundp 'tool-bar-mode)
   (tool-bar-mode -1))
 
-;; show no menu
-(menu-bar-mode -1)
+;; show no menu when open emacs in termimal
+(unless (display-graphic-p)
+  (menu-bar-mode -1))
 
 ;; disable tab
 (when (fboundp 'tabbar-mode)
-  (tabbar-mode 0))
+  (tabbar-mode -1))
 
 ;; hide scrollbar
 (when (fboundp 'scroll-bar-mode)

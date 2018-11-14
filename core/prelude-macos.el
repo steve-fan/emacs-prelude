@@ -42,6 +42,9 @@
 (setq interprogram-cut-function 'paste-to-osx)
 (setq interprogram-paste-function 'copy-from-osx)
 
+;; unset keybinding C-; to swap meta key (Aquamacs)
+(define-key osx-key-mode-map (kbd "C-;") nil)
+
 (provide 'prelude-macos)
 
 ;;; prelude-macos.el ends here

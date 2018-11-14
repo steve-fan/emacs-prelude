@@ -50,7 +50,6 @@
 (load-theme 'sanityinc-tomorrow-night t)
 
 ;; Font
-(setq linum-format "%3d")
 (set-frame-font "M+ 2m 16")
 (add-to-list 'default-frame-alist
              '(font . "M+ 2m 16"))
@@ -61,5 +60,14 @@
 ;; disable tabbar
 (when (fboundp 'tabbar-mode)
   (tabbar-mode -1))
+
+;; set linum format
+(setq linum-format "%3d")
+
+;; set linum foreground-color
+(require 'color)
+(require 'linum)
+(setq linum-forground-color (color-lighten-name (face-attribute 'default :background) 20))
+(set-face-foreground 'linum linum-forground-color)
 
 (provide 'prelude-ui)

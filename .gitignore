@@ -5,7 +5,7 @@ eshell
 projectile-bookmarks.eld
 projectile.cache
 SessionDesktop.el
-customization.el
+customization*.el
 bookmarks
 abbrev_defs
 anaconda-mode

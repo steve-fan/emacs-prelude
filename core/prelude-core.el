@@ -5,8 +5,13 @@
   (delete-other-windows))
 
 ;; save customization to 'customization.el' instread of appending to init file
-(setq custom-file (expand-file-name "customization.el" prelude-dir))
-(load custom-file (expand-file-name "customization.el" prelude-dir))
+(if (fboundp 'aquamacs-version)
+    (progn
+      (setq custom-file (expand-file-name "customization-aq.el" prelude-dir))
+      (load custom-file (expand-file-name "customization-aq.el" prelude-dir)))
+  (setq custom-file (expand-file-name "customization.el" prelude-dir))
+  (load custom-file (expand-file-name "customization.el" prelude-dir)))
+
 
 ;; enable mouse click and wheel action in terminal
 (unless (display-graphic-p)

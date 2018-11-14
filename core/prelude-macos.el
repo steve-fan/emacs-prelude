@@ -43,7 +43,8 @@
 (setq interprogram-paste-function 'copy-from-osx)
 
 ;; unset keybinding C-; to swap meta key (Aquamacs)
-(define-key osx-key-mode-map (kbd "C-;") nil)
+(when (fboundp 'osx-key-mode-map)
+  (define-key osx-key-mode-map (kbd "C-;") nil))
 
 (provide 'prelude-macos)
 

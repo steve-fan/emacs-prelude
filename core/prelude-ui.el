@@ -5,9 +5,6 @@
 (unless (display-graphic-p)
   (menu-bar-mode -1))
 
-;; disable tab
-(tabbar-mode -1)
-
 ;; hide scrollbar
 (when (fboundp 'scroll-bar-mode)
   (scroll-bar-mode -1))
@@ -60,5 +57,9 @@
 
 ;; open *help* in current frame for `one-buffer-one-frame-mode' (Aquamacs open *help* in a new frame)
 (setq special-display-regexps (remove "[ ]?\\*[hH]elp.*" special-display-regexps))
+
+;; disable tabbar
+(when (fboundp 'tabbar-mode)
+  (tabbar-mode -1))
 
 (provide 'prelude-ui)

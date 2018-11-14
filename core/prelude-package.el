@@ -31,6 +31,7 @@
     color-theme-sanityinc-tomorrow
     company
     crux
+    discover-my-major
     diff-hl
     diminish
     easy-kill

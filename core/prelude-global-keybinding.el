@@ -4,6 +4,8 @@
 ;; toggle maximize current buffer
 (global-set-key (kbd "C-c .") 'toggle-maximize-buffer)
 
+(global-set-key (kbd "M-w") 'prelude-copy-line-or-region)
+
 ;; remap goto-line to "C-c l" for convenience's sake
 (global-unset-key (kbd "M-g g"))
 (global-set-key (kbd "C-c l") 'goto-line)

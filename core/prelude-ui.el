@@ -73,4 +73,9 @@
 (setq linum-forground-color (color-lighten-name (face-attribute 'default :background) 20))
 (set-face-foreground 'linum linum-forground-color)
 
+;; awesome-tab
+(require 'awesome-tab)
+(awesome-tab-mode)
+(global-set-key [C-tab] 'awesome-tab-forward)
+
 (provide 'prelude-ui)

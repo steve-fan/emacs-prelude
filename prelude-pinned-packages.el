@@ -27,7 +27,7 @@
 ;;; Code:
 
 (add-to-list 'package-archives
-             '("melpa-stable" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa-stable/"))
+             '("melpa-stable" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa-stable/"))
 
 (setq package-pinned-packages
       '((avy . "melpa-stable")

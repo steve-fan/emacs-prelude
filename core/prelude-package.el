@@ -8,11 +8,11 @@
 
 (setq package-archives '())		;; reset package-archives
 (add-to-list 'package-archives
-	     '("melpa" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/") t)
+	     '("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/") t)
 (add-to-list 'package-archives
-	     '("gnu" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/") t)
+	     '("gnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/") t)
 (add-to-list 'package-archives
-	     '("org" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/org/") t)
+	     '("org" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/") t)
 
 ;; load the pinned packages
 (let ((prelude-pinned-packages-file (expand-file-name "prelude-pinned-packages.el" prelude-dir)))

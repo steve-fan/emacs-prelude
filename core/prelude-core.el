@@ -49,4 +49,7 @@
 
 (require 'crux)
 
+(require 'popwin)
+(popwin-mode)
+
 (provide 'prelude-core)

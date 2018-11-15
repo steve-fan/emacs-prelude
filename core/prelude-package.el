@@ -55,6 +55,7 @@
     monokai-theme
     move-text
     multiple-cursors
+    popwin
     projectile
     rainbow-delimiters
     smartparens

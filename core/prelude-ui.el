@@ -1,3 +1,6 @@
+;; maximaize initial frame
+(setq initial-frame-alist (quote ((fullscreen . maximized))))
+
 (when (fboundp 'tool-bar-mode)
   (tool-bar-mode -1))
 

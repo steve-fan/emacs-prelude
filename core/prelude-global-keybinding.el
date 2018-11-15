@@ -7,6 +7,10 @@
 (global-set-key (kbd "M-w") 'prelude-copy-line-or-region)
 (global-set-key (kbd "C-c w") 'prelude-copy-word-at-point)
 
+;; Visual replace
+(require 'visual-regexp)
+(global-set-key (kbd "C-c r") 'vr/replace)
+
 ;; remap goto-line to "C-c l" for convenience's sake
 (global-unset-key (kbd "M-g g"))
 (global-set-key (kbd "C-c l") 'goto-line)

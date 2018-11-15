@@ -32,6 +32,14 @@
            (window-configuration-to-register '_)
            (delete-other-windows))))
 
+(defun prelude-copy-word-at-point (&optional arg)
+  "Copy words at point"
+  (interactive "P")
+  (let ((beg (progn (if (looking-back "[a-zA-Z0-9]" 1) (backward-word 1)) (point)))
+        (end (progn (forward-word arg) (point))))
+    (copy-region-as-kill beg end))
+  )
+
 ;; delete trailing blanks
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 

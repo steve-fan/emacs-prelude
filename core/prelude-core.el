@@ -52,4 +52,11 @@
 (require 'popwin)
 (popwin-mode)
 
+(defun prelude-open-init-file ()
+  "Open init file"
+  (interactive)
+  (find-file "~/.emacs.d/init.el"))
+
+(global-set-key (kbd "<f2>") 'prelude-open-init-file)
+
 (provide 'prelude-core)
